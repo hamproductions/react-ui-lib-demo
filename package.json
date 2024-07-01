@@ -9,7 +9,7 @@
     "lint": "next lint",
     "codegen:api": "bun x @openapitools/openapi-generator-cli generate -g typescript-fetch -o src/api -i https://raw.githubusercontent.com/PokeAPI/pokeapi/master/openapi.yml",
     "codegen:panda": "panda codegen",
-    "prepare": "bun codegen:api && bun codegen:panda"
+    "prepare": "bun codegen:panda"
   },
   "dependencies": {
     "@ark-ui/react": "^3.3.0",
