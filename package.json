@@ -7,12 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "panda codegen"
+    "codegen:api": " bunx @openapitools/openapi-generator-cli generate -g typescript-fetch -o src/app/api -i https://raw.githubusercontent.com/PokeAPI/pokeapi/master/openapi.yml",
+    "codegen:panda": "panda codegen",
+    "prepare": "bun codegen:api && bun codegen:panda"
   },
   "dependencies": {
     "@ark-ui/react": "^3.3.0",
     "@pandacss/dev": "^0.41.0",
     "@park-ui/panda-preset": "^0.38.0",
+    "axios": "^1.7.2",
     "next": "rc",
     "npm": "^10.8.1",
     "react": "rc",
