@@ -28,32 +28,6 @@ import type {
   PaginatedMoveSummaryList,
   PaginatedMoveTargetSummaryList,
 } from '../models/index';
-import {
-    MoveBattleStyleDetailFromJSON,
-    MoveBattleStyleDetailToJSON,
-    MoveDetailFromJSON,
-    MoveDetailToJSON,
-    MoveLearnMethodDetailFromJSON,
-    MoveLearnMethodDetailToJSON,
-    MoveMetaAilmentDetailFromJSON,
-    MoveMetaAilmentDetailToJSON,
-    MoveMetaCategoryDetailFromJSON,
-    MoveMetaCategoryDetailToJSON,
-    MoveTargetDetailFromJSON,
-    MoveTargetDetailToJSON,
-    PaginatedMoveBattleStyleSummaryListFromJSON,
-    PaginatedMoveBattleStyleSummaryListToJSON,
-    PaginatedMoveLearnMethodSummaryListFromJSON,
-    PaginatedMoveLearnMethodSummaryListToJSON,
-    PaginatedMoveMetaAilmentSummaryListFromJSON,
-    PaginatedMoveMetaAilmentSummaryListToJSON,
-    PaginatedMoveMetaCategorySummaryListFromJSON,
-    PaginatedMoveMetaCategorySummaryListToJSON,
-    PaginatedMoveSummaryListFromJSON,
-    PaginatedMoveSummaryListToJSON,
-    PaginatedMoveTargetSummaryListFromJSON,
-    PaginatedMoveTargetSummaryListToJSON,
-} from '../models/index';
 
 export interface MoveAilmentListRequest {
     limit?: number;
@@ -151,7 +125,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveMetaAilmentSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -189,7 +163,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveMetaAilmentDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -232,7 +206,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveBattleStyleSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -270,7 +244,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveBattleStyleDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -313,7 +287,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveMetaCategorySummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -351,7 +325,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveMetaCategoryDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -394,7 +368,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveLearnMethodSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -432,7 +406,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveLearnMethodDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -475,7 +449,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -513,7 +487,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -556,7 +530,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveTargetSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -594,7 +568,7 @@ export class MovesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveTargetDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

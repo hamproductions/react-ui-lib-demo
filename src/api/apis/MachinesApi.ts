@@ -18,12 +18,6 @@ import type {
   MachineDetail,
   PaginatedMachineSummaryList,
 } from '../models/index';
-import {
-    MachineDetailFromJSON,
-    MachineDetailToJSON,
-    PaginatedMachineSummaryListFromJSON,
-    PaginatedMachineSummaryListToJSON,
-} from '../models/index';
 
 export interface MachineListRequest {
     limit?: number;
@@ -71,7 +65,7 @@ export class MachinesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMachineSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -109,7 +103,7 @@ export class MachinesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MachineDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

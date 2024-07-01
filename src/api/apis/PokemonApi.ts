@@ -48,72 +48,6 @@ import type {
   StatDetail,
   TypeDetail,
 } from '../models/index';
-import {
-    AbilityDetailFromJSON,
-    AbilityDetailToJSON,
-    CharacteristicDetailFromJSON,
-    CharacteristicDetailToJSON,
-    EggGroupDetailFromJSON,
-    EggGroupDetailToJSON,
-    GenderDetailFromJSON,
-    GenderDetailToJSON,
-    GrowthRateDetailFromJSON,
-    GrowthRateDetailToJSON,
-    MoveDamageClassDetailFromJSON,
-    MoveDamageClassDetailToJSON,
-    NatureDetailFromJSON,
-    NatureDetailToJSON,
-    PaginatedAbilitySummaryListFromJSON,
-    PaginatedAbilitySummaryListToJSON,
-    PaginatedCharacteristicSummaryListFromJSON,
-    PaginatedCharacteristicSummaryListToJSON,
-    PaginatedEggGroupSummaryListFromJSON,
-    PaginatedEggGroupSummaryListToJSON,
-    PaginatedGenderSummaryListFromJSON,
-    PaginatedGenderSummaryListToJSON,
-    PaginatedGrowthRateSummaryListFromJSON,
-    PaginatedGrowthRateSummaryListToJSON,
-    PaginatedMoveDamageClassSummaryListFromJSON,
-    PaginatedMoveDamageClassSummaryListToJSON,
-    PaginatedNatureSummaryListFromJSON,
-    PaginatedNatureSummaryListToJSON,
-    PaginatedPokeathlonStatSummaryListFromJSON,
-    PaginatedPokeathlonStatSummaryListToJSON,
-    PaginatedPokemonColorSummaryListFromJSON,
-    PaginatedPokemonColorSummaryListToJSON,
-    PaginatedPokemonFormSummaryListFromJSON,
-    PaginatedPokemonFormSummaryListToJSON,
-    PaginatedPokemonHabitatSummaryListFromJSON,
-    PaginatedPokemonHabitatSummaryListToJSON,
-    PaginatedPokemonShapeSummaryListFromJSON,
-    PaginatedPokemonShapeSummaryListToJSON,
-    PaginatedPokemonSpeciesSummaryListFromJSON,
-    PaginatedPokemonSpeciesSummaryListToJSON,
-    PaginatedPokemonSummaryListFromJSON,
-    PaginatedPokemonSummaryListToJSON,
-    PaginatedStatSummaryListFromJSON,
-    PaginatedStatSummaryListToJSON,
-    PaginatedTypeSummaryListFromJSON,
-    PaginatedTypeSummaryListToJSON,
-    PokeathlonStatDetailFromJSON,
-    PokeathlonStatDetailToJSON,
-    PokemonColorDetailFromJSON,
-    PokemonColorDetailToJSON,
-    PokemonDetailFromJSON,
-    PokemonDetailToJSON,
-    PokemonFormDetailFromJSON,
-    PokemonFormDetailToJSON,
-    PokemonHabitatDetailFromJSON,
-    PokemonHabitatDetailToJSON,
-    PokemonShapeDetailFromJSON,
-    PokemonShapeDetailToJSON,
-    PokemonSpeciesDetailFromJSON,
-    PokemonSpeciesDetailToJSON,
-    StatDetailFromJSON,
-    StatDetailToJSON,
-    TypeDetailFromJSON,
-    TypeDetailToJSON,
-} from '../models/index';
 
 export interface AbilityListRequest {
     limit?: number;
@@ -310,7 +244,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedAbilitySummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -346,7 +280,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => AbilityDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -388,7 +322,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedCharacteristicSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -426,7 +360,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => CharacteristicDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -469,7 +403,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedEggGroupSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -507,7 +441,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => EggGroupDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -550,7 +484,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedGenderSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -588,7 +522,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => GenderDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -631,7 +565,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedGrowthRateSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -669,7 +603,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => GrowthRateDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -712,7 +646,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedMoveDamageClassSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -750,7 +684,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MoveDamageClassDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -793,7 +727,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedNatureSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -831,7 +765,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => NatureDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -874,7 +808,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokeathlonStatSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -912,7 +846,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokeathlonStatDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -955,7 +889,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokemonColorSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -993,7 +927,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokemonColorDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1036,7 +970,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokemonFormSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1074,7 +1008,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokemonFormDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1117,7 +1051,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokemonHabitatSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1155,7 +1089,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokemonHabitatDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1198,7 +1132,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokemonSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1236,7 +1170,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokemonDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1279,7 +1213,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokemonShapeSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1317,7 +1251,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokemonShapeDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1360,7 +1294,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokemonSpeciesSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1398,7 +1332,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokemonSpeciesDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1441,7 +1375,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedStatSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1479,7 +1413,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StatDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1522,7 +1456,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedTypeSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -1560,7 +1494,7 @@ export class PokemonApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => TypeDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

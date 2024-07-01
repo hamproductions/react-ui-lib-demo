@@ -18,12 +18,6 @@ import type {
   LanguageDetail,
   PaginatedLanguageSummaryList,
 } from '../models/index';
-import {
-    LanguageDetailFromJSON,
-    LanguageDetailToJSON,
-    PaginatedLanguageSummaryListFromJSON,
-    PaginatedLanguageSummaryListToJSON,
-} from '../models/index';
 
 export interface LanguageListRequest {
     limit?: number;
@@ -71,7 +65,7 @@ export class UtilityApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedLanguageSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -109,7 +103,7 @@ export class UtilityApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => LanguageDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

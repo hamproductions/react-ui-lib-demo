@@ -26,28 +26,6 @@ import type {
   PaginatedItemPocketSummaryList,
   PaginatedItemSummaryList,
 } from '../models/index';
-import {
-    ItemAttributeDetailFromJSON,
-    ItemAttributeDetailToJSON,
-    ItemCategoryDetailFromJSON,
-    ItemCategoryDetailToJSON,
-    ItemDetailFromJSON,
-    ItemDetailToJSON,
-    ItemFlingEffectDetailFromJSON,
-    ItemFlingEffectDetailToJSON,
-    ItemPocketDetailFromJSON,
-    ItemPocketDetailToJSON,
-    PaginatedItemAttributeSummaryListFromJSON,
-    PaginatedItemAttributeSummaryListToJSON,
-    PaginatedItemCategorySummaryListFromJSON,
-    PaginatedItemCategorySummaryListToJSON,
-    PaginatedItemFlingEffectSummaryListFromJSON,
-    PaginatedItemFlingEffectSummaryListToJSON,
-    PaginatedItemPocketSummaryListFromJSON,
-    PaginatedItemPocketSummaryListToJSON,
-    PaginatedItemSummaryListFromJSON,
-    PaginatedItemSummaryListToJSON,
-} from '../models/index';
 
 export interface ItemAttributeListRequest {
     limit?: number;
@@ -135,7 +113,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedItemAttributeSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -173,7 +151,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ItemAttributeDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -216,7 +194,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedItemCategorySummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -254,7 +232,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ItemCategoryDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -297,7 +275,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedItemFlingEffectSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -335,7 +313,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ItemFlingEffectDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -378,7 +356,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedItemSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -421,7 +399,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedItemPocketSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -459,7 +437,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ItemPocketDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -497,7 +475,7 @@ export class ItemsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ItemDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

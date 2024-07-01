@@ -24,24 +24,6 @@ import type {
   VersionDetail,
   VersionGroupDetail,
 } from '../models/index';
-import {
-    GenerationDetailFromJSON,
-    GenerationDetailToJSON,
-    PaginatedGenerationSummaryListFromJSON,
-    PaginatedGenerationSummaryListToJSON,
-    PaginatedPokedexSummaryListFromJSON,
-    PaginatedPokedexSummaryListToJSON,
-    PaginatedVersionGroupSummaryListFromJSON,
-    PaginatedVersionGroupSummaryListToJSON,
-    PaginatedVersionSummaryListFromJSON,
-    PaginatedVersionSummaryListToJSON,
-    PokedexDetailFromJSON,
-    PokedexDetailToJSON,
-    VersionDetailFromJSON,
-    VersionDetailToJSON,
-    VersionGroupDetailFromJSON,
-    VersionGroupDetailToJSON,
-} from '../models/index';
 
 export interface GenerationListRequest {
     limit?: number;
@@ -119,7 +101,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedGenerationSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -157,7 +139,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => GenerationDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -200,7 +182,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPokedexSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -238,7 +220,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PokedexDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -281,7 +263,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedVersionGroupSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -319,7 +301,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => VersionGroupDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -362,7 +344,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedVersionSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -400,7 +382,7 @@ export class GamesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => VersionDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

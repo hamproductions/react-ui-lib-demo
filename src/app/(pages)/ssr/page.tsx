@@ -14,10 +14,10 @@ const SSRPage = ({
   const page = searchParams?.page ? Number(searchParams.page) : 0;
 
   return (
-    <Center minH="screen">
+    <Center flex={1}>
       <Stack>
         <Heading>This is SSR Rendered</Heading>
-        <PokemonPageServer page={page} urlPrefix="/ssr" />
+        <PokemonPageServer page={page} urlPrefix="/ssr/" />
         <SSRPagination
           page={page}
           previousUrl={`?page=${page - 1}`}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./index.css";
-import { HStack, Stack, Wrap } from "styled-system/jsx";
+import { Container, HStack, Stack, Wrap } from "styled-system/jsx";
 import { Text } from "components/ui/text";
 import { Link } from "components/ui/link";
 import { NavigationLinks } from "./components/layout/NavigationLinks";
@@ -26,7 +26,7 @@ export default function RootLayout({
             </Link>
             <NavigationLinks />
           </HStack>
-          {children}
+          <Container flex={1}>{children}</Container>
         </Stack>
       </body>
     </html>

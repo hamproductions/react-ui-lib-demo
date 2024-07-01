@@ -1,14 +1,12 @@
 "use client";
 
-import { Text } from "components/ui/text";
 import { Suspense, use, useState } from "react";
 import { Stack } from "styled-system/jsx";
-import { PokemonApi } from "../../../api";
 
-import { Skeleton } from "components/ui/skeleton";
-import { Pagination } from "../layout/Pagination";
 import { fetchPokemons } from "@/app/utils/fetchPokemons";
-import { PokemonItem } from "./PokemonItem";
+import { Skeleton } from "components/ui/skeleton";
+import { PokemonItem } from "@/app/components/pokemon/PokemonItem";
+import { Pagination } from "@/app/components/layout/Pagination";
 
 const PokemonPage = (props: { page: number; urlPrefix?: string }) => {
   const pokemons = use(fetchPokemons(props.page));
@@ -26,7 +24,7 @@ export const PokemonListClient = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <Stack>
+    <Stack w="full">
       <Suspense
         fallback={
           <Stack w="full">
@@ -38,7 +36,7 @@ export const PokemonListClient = () => {
           </Stack>
         }
       >
-        <PokemonPage page={page * 20} urlPrefix="/csr" />
+        <PokemonPage page={page * 20} urlPrefix="/csr/details?id=" />
       </Suspense>
       <Pagination
         page={page}

@@ -23,22 +23,6 @@ import type {
   PaginatedEncounterMethodSummaryList,
   PokemonEncountersRetrieve200ResponseInner,
 } from '../models/index';
-import {
-    EncounterConditionDetailFromJSON,
-    EncounterConditionDetailToJSON,
-    EncounterConditionValueDetailFromJSON,
-    EncounterConditionValueDetailToJSON,
-    EncounterMethodDetailFromJSON,
-    EncounterMethodDetailToJSON,
-    PaginatedEncounterConditionSummaryListFromJSON,
-    PaginatedEncounterConditionSummaryListToJSON,
-    PaginatedEncounterConditionValueSummaryListFromJSON,
-    PaginatedEncounterConditionValueSummaryListToJSON,
-    PaginatedEncounterMethodSummaryListFromJSON,
-    PaginatedEncounterMethodSummaryListToJSON,
-    PokemonEncountersRetrieve200ResponseInnerFromJSON,
-    PokemonEncountersRetrieve200ResponseInnerToJSON,
-} from '../models/index';
 
 export interface EncounterConditionListRequest {
     limit?: number;
@@ -110,7 +94,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedEncounterConditionSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -148,7 +132,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => EncounterConditionDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -191,7 +175,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedEncounterConditionValueSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -229,7 +213,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => EncounterConditionValueDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -272,7 +256,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedEncounterMethodSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -310,7 +294,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => EncounterMethodDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -348,7 +332,7 @@ export class EncountersApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(PokemonEncountersRetrieve200ResponseInnerFromJSON));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

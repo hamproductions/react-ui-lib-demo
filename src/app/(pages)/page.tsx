@@ -5,7 +5,7 @@ import { NavigationLinks } from "../components/layout/NavigationLinks";
 
 export default function Home() {
   return (
-    <Center minH="screen" w="screen">
+    <Center flex={1} w="screen">
       <Stack>
         <Text>Reactサーバーコンポーネントいろいろ</Text>
         <NavigationLinks />

@@ -24,24 +24,6 @@ import type {
   PalParkAreaDetail,
   RegionDetail,
 } from '../models/index';
-import {
-    LocationAreaDetailFromJSON,
-    LocationAreaDetailToJSON,
-    LocationDetailFromJSON,
-    LocationDetailToJSON,
-    PaginatedLocationAreaSummaryListFromJSON,
-    PaginatedLocationAreaSummaryListToJSON,
-    PaginatedLocationSummaryListFromJSON,
-    PaginatedLocationSummaryListToJSON,
-    PaginatedPalParkAreaSummaryListFromJSON,
-    PaginatedPalParkAreaSummaryListToJSON,
-    PaginatedRegionSummaryListFromJSON,
-    PaginatedRegionSummaryListToJSON,
-    PalParkAreaDetailFromJSON,
-    PalParkAreaDetailToJSON,
-    RegionDetailFromJSON,
-    RegionDetailToJSON,
-} from '../models/index';
 
 export interface LocationAreaListRequest {
     limit?: number;
@@ -114,7 +96,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedLocationAreaSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -152,7 +134,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => LocationAreaDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -195,7 +177,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedLocationSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -233,7 +215,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => LocationDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -276,7 +258,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedPalParkAreaSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -314,7 +296,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PalParkAreaDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -357,7 +339,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedRegionSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -395,7 +377,7 @@ export class LocationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RegionDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

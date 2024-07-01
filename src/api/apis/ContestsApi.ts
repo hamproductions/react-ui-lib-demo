@@ -22,20 +22,6 @@ import type {
   PaginatedSuperContestEffectSummaryList,
   SuperContestEffectDetail,
 } from '../models/index';
-import {
-    ContestEffectDetailFromJSON,
-    ContestEffectDetailToJSON,
-    ContestTypeDetailFromJSON,
-    ContestTypeDetailToJSON,
-    PaginatedContestEffectSummaryListFromJSON,
-    PaginatedContestEffectSummaryListToJSON,
-    PaginatedContestTypeSummaryListFromJSON,
-    PaginatedContestTypeSummaryListToJSON,
-    PaginatedSuperContestEffectSummaryListFromJSON,
-    PaginatedSuperContestEffectSummaryListToJSON,
-    SuperContestEffectDetailFromJSON,
-    SuperContestEffectDetailToJSON,
-} from '../models/index';
 
 export interface ContestEffectListRequest {
     limit?: number;
@@ -103,7 +89,7 @@ export class ContestsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedContestEffectSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -141,7 +127,7 @@ export class ContestsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ContestEffectDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -184,7 +170,7 @@ export class ContestsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedContestTypeSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -222,7 +208,7 @@ export class ContestsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ContestTypeDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -265,7 +251,7 @@ export class ContestsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedSuperContestEffectSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -303,7 +289,7 @@ export class ContestsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => SuperContestEffectDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

@@ -20,16 +20,6 @@ import type {
   PaginatedEvolutionChainSummaryList,
   PaginatedEvolutionTriggerSummaryList,
 } from '../models/index';
-import {
-    EvolutionChainDetailFromJSON,
-    EvolutionChainDetailToJSON,
-    EvolutionTriggerDetailFromJSON,
-    EvolutionTriggerDetailToJSON,
-    PaginatedEvolutionChainSummaryListFromJSON,
-    PaginatedEvolutionChainSummaryListToJSON,
-    PaginatedEvolutionTriggerSummaryListFromJSON,
-    PaginatedEvolutionTriggerSummaryListToJSON,
-} from '../models/index';
 
 export interface EvolutionChainListRequest {
     limit?: number;
@@ -87,7 +77,7 @@ export class EvolutionApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedEvolutionChainSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -125,7 +115,7 @@ export class EvolutionApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => EvolutionChainDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -168,7 +158,7 @@ export class EvolutionApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedEvolutionTriggerSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -206,7 +196,7 @@ export class EvolutionApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => EvolutionTriggerDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

@@ -22,20 +22,6 @@ import type {
   PaginatedBerryFlavorSummaryList,
   PaginatedBerrySummaryList,
 } from '../models/index';
-import {
-    BerryDetailFromJSON,
-    BerryDetailToJSON,
-    BerryFirmnessDetailFromJSON,
-    BerryFirmnessDetailToJSON,
-    BerryFlavorDetailFromJSON,
-    BerryFlavorDetailToJSON,
-    PaginatedBerryFirmnessSummaryListFromJSON,
-    PaginatedBerryFirmnessSummaryListToJSON,
-    PaginatedBerryFlavorSummaryListFromJSON,
-    PaginatedBerryFlavorSummaryListToJSON,
-    PaginatedBerrySummaryListFromJSON,
-    PaginatedBerrySummaryListToJSON,
-} from '../models/index';
 
 export interface BerryFirmnessListRequest {
     limit?: number;
@@ -103,7 +89,7 @@ export class BerriesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedBerryFirmnessSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -141,7 +127,7 @@ export class BerriesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BerryFirmnessDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -184,7 +170,7 @@ export class BerriesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedBerryFlavorSummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -222,7 +208,7 @@ export class BerriesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BerryFlavorDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -265,7 +251,7 @@ export class BerriesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PaginatedBerrySummaryListFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -303,7 +289,7 @@ export class BerriesApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BerryDetailFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

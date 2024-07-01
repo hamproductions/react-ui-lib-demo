@@ -3,20 +3,21 @@ import { fetchPokemonDetail } from "@/app/utils/fetchPokemons";
 import { Button } from "components/ui/button";
 import { Heading } from "components/ui/heading";
 import { Link } from "components/ui/link";
+import dynamic from "next/dynamic";
 import { Center, Stack } from "styled-system/jsx";
+import { PokemonDetailsPage } from "./PokemonDetailsPage";
 
-const SSRPage = async ({ params }: { params: { pokemon: string } }) => {
-  const id = Number(params.pokemon);
-  const data = await fetchPokemonDetail(id);
-
+const CSRPage = async () => {
   return (
     <Center flex={1}>
-      <Stack>
-        <Link href="/ssr">Back</Link>
-        <PokemonDetails data={data} />
+      <Stack w="full">
+        <Link href="/csr">Back</Link>
+        <PokemonDetailsPage />
       </Stack>
     </Center>
   );
 };
 
-export default SSRPage;
+export default dynamic(() => Promise.resolve(CSRPage), {
+  ssr: false,
+});

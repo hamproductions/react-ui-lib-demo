@@ -11,10 +11,10 @@ export const PokemonItem = ({
   urlPrefix?: string;
 }) => {
   const { name, url } = data;
-  console.log(url);
+
   return (
     <Stack>
-      <Link href={`${urlPrefix}/${url.split("/").at(-2)}`} key={url}>
+      <Link href={`${urlPrefix}${url.split("/").at(-2)}`} key={url}>
         {name}
       </Link>
     </Stack>
