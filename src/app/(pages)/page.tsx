@@ -5,10 +5,12 @@ import { NavigationLinks } from "../components/layout/NavigationLinks";
 
 export default function Home() {
   return (
-    <Center flex={1} w="screen">
+    <Center flex={1} w="full" minH="screen">
       <Stack>
         <Text>Reactサーバーコンポーネントいろいろ</Text>
-        <NavigationLinks />
+        <Center>
+          <NavigationLinks />
+        </Center>
       </Stack>
     </Center>
   );

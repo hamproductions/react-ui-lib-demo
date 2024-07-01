@@ -10,7 +10,7 @@ import { PokemonDetailsPage } from "./PokemonDetailsPage";
 const CSRPage = async () => {
   return (
     <Center flex={1}>
-      <Stack w="full">
+      <Stack>
         <Link href="/csr">Back</Link>
         <PokemonDetailsPage />
       </Stack>

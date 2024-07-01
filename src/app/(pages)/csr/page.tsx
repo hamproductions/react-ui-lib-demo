@@ -6,7 +6,7 @@ import { PokemonListClient } from "./PokemonListClient";
 
 const CSRPage = () => {
   return (
-    <Center flex={1}>
+    <Center textAlign="center" flex={1}>
       <Stack w="full">
         <Heading>This is Client Side Rendered</Heading>
         <Suspense>

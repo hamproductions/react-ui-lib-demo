@@ -26,7 +26,9 @@ export default function RootLayout({
             </Link>
             <NavigationLinks />
           </HStack>
-          <Container flex={1}>{children}</Container>
+          <Container flex={1} display="flex">
+            {children}
+          </Container>
         </Stack>
       </body>
     </html>

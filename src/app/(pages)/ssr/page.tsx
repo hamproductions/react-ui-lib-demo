@@ -14,7 +14,7 @@ const SSRPage = ({
   const page = searchParams?.page ? Number(searchParams.page) : 0;
 
   return (
-    <Center flex={1}>
+    <Center textAlign="center" flex={1}>
       <Stack>
         <Heading>This is SSR Rendered</Heading>
         <PokemonPageServer page={page} urlPrefix="/ssr/" />

@@ -4,7 +4,7 @@ import { Text } from "components/ui/text";
 import { Center, Stack, Wrap, styled } from "styled-system/jsx";
 
 export const PokemonDetails = ({ data }: { data: PokemonDetail }) => {
-  const { name, types, sprites, moves, abilities } = data;
+  const { name, types, sprites, moves, abilities, cries } = data;
 
   return (
     <Center textAlign="center">
@@ -50,6 +50,8 @@ export const PokemonDetails = ({ data }: { data: PokemonDetail }) => {
             })}
           </Wrap>
         </Stack>
+        <Heading as="h2">Cries</Heading>
+        <styled.audio controls src={cries.latest} />
       </Stack>
     </Center>
   );
