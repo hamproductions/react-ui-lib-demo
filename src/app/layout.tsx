@@ -4,7 +4,6 @@ import "./index.css";
 import { Container, HStack, Stack, Wrap } from "styled-system/jsx";
 import { Text } from "components/ui/text";
 import { Link } from "components/ui/link";
-import { NavigationLinks } from "./components/layout/NavigationLinks";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,12 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Stack minH="screen">
-          <HStack w="full" p="2" justifyContent="space-between">
-            <Link href="/">
-              <Text>Pokedex</Text>
-            </Link>
-            <NavigationLinks />
-          </HStack>
           <Container flex={1} display="flex">
             {children}
           </Container>

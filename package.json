@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "codegen:api": "bun x @openapitools/openapi-generator-cli generate -g typescript-fetch -o src/api -i https://raw.githubusercontent.com/PokeAPI/pokeapi/master/openapi.yml --additional-properties=withoutRuntimeChecks=true",
     "codegen:panda": "panda codegen",
     "prepare": "bun codegen:panda"
   },
