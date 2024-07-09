@@ -1,6 +1,5 @@
-import { Heading } from "components/ui/heading";
-import { Text } from "components/ui/text";
-import { Center, Stack } from "styled-system/jsx";
+import { Text } from 'components/ui/text';
+import { Center, Stack } from 'styled-system/jsx';
 
 export default function Home() {
   return (
