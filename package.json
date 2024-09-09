@@ -10,7 +10,8 @@
     "lint:fix": "eslint src --fix",
     "fix": "bun lint:fix",
     "codegen:panda": "panda codegen",
-    "prepare": "bun codegen:panda"
+    "prepare": "bun codegen:panda",
+    "generate": "bunx @marp-team/marp-cli@latest --allow-local-files README.md -o slides.pdf"
   },
   "dependencies": {
     "@ark-ui/react": "^3.5.0",

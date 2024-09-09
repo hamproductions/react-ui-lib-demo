@@ -141,7 +141,3 @@ React Native
 |---|---|---|
 |Tailwind||CSS|✖︎| -->
 
-Directory構造
-Angularについて/Nest.js
-React Hook/ Custom Hook
-CSS/ UI Framework + CSS-in-JS/ CSS modules
